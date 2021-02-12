@@ -21,6 +21,7 @@
 - Contact
  -----------------------------------
  <br>
+ 
 **General info**
 <br>
 These are the API’s developed in Java, using technologies like Spring Boot, Selenium for Automation of testing and Axe-Core APIs for performing accessibility tests on webpages. It provides a simple and intuitive application programming interface to assist the user in testing and generating reports. These report helps the user to fix the violation of any desired website. The tool aids developers in identifying accessibility problems and features for WCAG 2.0, WCAG 2.1, Section 508 and AXE best standards. 
@@ -38,6 +39,7 @@ These are the API’s developed in Java, using technologies like Spring Boot, Se
    - Awagger API documentation
 -----------------------
 <br>
+
 ## User Guidelines - Setup for running using STS 
 
 **Importing Project:**
