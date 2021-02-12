@@ -50,16 +50,16 @@ After importing the project in STS, setup the project as follows-<br>
 - Open “config.properties” file:<br>
 - On left-side Package Explorer AccessibilityAuditToolApiApplication --> src/main/resources --> config.properties <br>
 - In “config.properties” : 
-- A chrome driver should be downloaded for the specific chrome browser version. If you are using Chrome version 88, please download Chrome Driver 88.0.4324.
-Official Website to download [chrome driver](https://chromedriver.chromium.org/downloads) 
-<br>
+  A chrome driver should be downloaded for the specific chrome browser version. If you are using Chrome version 88, please download Chrome Driver 88.0.4324.
+  Official Website to download [chrome driver](https://chromedriver.chromium.org/downloads) <br>
 
-<b>1.	pathToChromeDriver -</b> copy paste the path location of the chrome driver that is installed on the machine.  
+
+  <b>1.	pathToChromeDriver -</b> copy paste the path location of the chrome driver that is installed on the machine.  
 	e.g. pathToChromeDriver=C:\\chromedriver.exe <br>
-<b>2.	pathToStoreAllReport -</b> copy paste the path location of the folder where all the reports should be saved.  
+  <b>2.	pathToStoreAllReport -</b> copy paste the path location of the folder where all the reports should be saved.  
 	e.g. pathToStoreAllReport =C:\\Generated Reports\\Test <br>
 	Here, Test is the folder name where all the reports will be saved. <br>
-<b>3.	pathToStoreReport -</b> copy paste the path location of the folder where any report should be saved.<br>
+  <b>3.	pathToStoreReport -</b> copy paste the path location of the folder where any report should be saved.<br>
 	e.g. pathToStoreReport =C:\\Generated Reports\\Test <br>
 	Here, Test is the folder name where the specific report will be saved. <br>
 
@@ -99,8 +99,8 @@ After providing the input, the Crawler Controller API will return the crawled UR
 
 
 ### 2. Violation Controller API:
-• <b>API Url (getvoilation):</b>" <br>http://localhost:8050/AccessibilityAuditToolApi-0.0.1-SNAPSHOT/api/utility/getvoilation?url=http://127.0.0.1:5500/index.html "<br>
-This API gets the Accessibility violations for the URL, here it is "http://127.0.0.1:5500/index.html”, and this violation’s is in json format.
+• <b>API Url (getvoilation):</b>" <br>http://localhost:2280/api/utility/getvoilation?values=http://127.0.0.1:5500/index.html&values=cat.keyboard "<br>
+This API gets the Accessibility violations for the URL, here it is "http://127.0.0.1:5500/index.html”, and this violation’s is in json format and "cat.keyboard" is the tag value we want to filter.
 
  Enter the API URL into the web browser or your choice of API Client like postman or swagger.
   <img src='.\API Screenshots\getviolation.png'><br>
@@ -108,13 +108,12 @@ After providing the API URL input, the Violation Controller API will return the 
   <img src='.\API Screenshots\getviolation1.png'> <br>
 
 
-
 <br>
 <br>
 <br>
 
 
-• <b>API Url (downloadreport):</b><br> " http://localhost:8050/AccessibilityAuditToolApi-0.0.1-SNAPSHOT/api/utility/downloadreport?url=http://127.0.0.1:5500/index.html "<br>
+• <b>API Url (downloadreport):</b><br> " http://localhost:2280/api/utility/downloadreport?values=http://127.0.0.1:5500/index.html@values=wcag2a "<br>
 This API gets the Accessibility violations of the given web page and generates json and Excel file and return "urlname_timestamp.zip" as a response.
 
 Enter the API URL into the web browser or your choice of API Client like postman or swagger.
@@ -130,7 +129,7 @@ After providing the API URL input, the Violation Controller API will generate js
 
 
 ### 3. TestAllURLExcel Controller API:
-•<b> API Url:</b> " http://localhost:8050/AccessibilityAuditToolApi-0.0.1-SNAPSHOT/api/utility/getallreports " <br>
+•<b> API Url:</b> " http://localhost:2280/api/utility/getallreports " <br>
 This API takes JSON object as input which contains the List of URLS for which accessibility violation report should be generated. API returns the response in "timestamp.zip", the zip file contains the Excel and Json file for each URL in json input.
 
 Here we are using Postman as API client to perform post request. Here we have to provide the List of URL’s for which accessibility violation report should be generated in JSON format as API request body. After clicking on send the API will return the zip file consisting the required JSON and Excel files.
@@ -145,7 +144,7 @@ Here we are using Postman as API client to perform post request. Here we have to
 
 
 ### 4. HelpScrapper Controller API:
-•<b> API Url:</b><br><"http://localhost:8050/AccessibilityAuditToolApi-0.0.1-SNAPSHOT/api/utility/gethelp?url=https://dequeuniversity.com/rules/axe/4.1/image-alt?application=axeAPI "<br>
+•<b> API Url:</b><br><"http://localhost:2280/api/utility/gethelp?url=https://dequeuniversity.com/rules/axe/4.1/image-alt?application=axeAPI "<br>
 
 This API takes the Help URL as input and return this help information to solve the violation. Here Help URL is: “https://dequeuniversity.com/rules/axe/4.1/image-alt?application=axeAPI” 
 
