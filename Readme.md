@@ -41,17 +41,17 @@ These are the API’s developed in Java, using technologies like Spring Boot, Se
 **Importing Project:**
    - Unzip the code file.
    - To import the code zip file in STS - <br>
-     File -->Import --> General --> Existing Projects into Workspace --> Next --> Select Root directory (browse the unzipped file) --> Search for nested projects --> Finish
+     File -->Import --> General --> Existing Projects into Workspace --> Next --> Select Root directory (browse the unzipped file) --> Search for nested projects --> Finish.
 
 **Setup Config:**
 <br>
 After importing the project in STS, setup the project as follows-<br>
-Wait till all the dependencies are loaded in the project, stable internet connection is required. <br>
-Open “config.properties” file:<br>
-On left-side Package Explorer AccessibilityAuditToolApiApplication --> src/main/resources --> config.properties <br>
-In “config.properties” : 
-A chrome driver should be downloaded for the specific chrome browser version. If you are using Chrome version 88, please download Chrome Driver 88.0.4324.
-Official Website to download chrome driver- https://chromedriver.chromium.org/downloads 
+- Wait till all the dependencies are loaded in the project, stable internet connection is required. <br>
+- Open “config.properties” file:<br>
+- On left-side Package Explorer AccessibilityAuditToolApiApplication --> src/main/resources --> config.properties <br>
+- In “config.properties” : 
+- A chrome driver should be downloaded for the specific chrome browser version. If you are using Chrome version 88, please download Chrome Driver 88.0.4324.
+Official Website to download [chrome driver](https://chromedriver.chromium.org/downloads) 
 <br>
 
 <b>1.	pathToChromeDriver -</b> copy paste the path location of the chrome driver that is installed on the machine.  
@@ -109,8 +109,9 @@ After providing the API URL input, the Violation Controller API will return the 
 
 
 
-
-
+<br>
+<br>
+<br>
 
 
 • <b>API Url (downloadreport):</b><br> " http://localhost:8050/AccessibilityAuditToolApi-0.0.1-SNAPSHOT/api/utility/downloadreport?url=http://127.0.0.1:5500/index.html "<br>
