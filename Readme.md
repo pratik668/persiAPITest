@@ -52,12 +52,12 @@ A chrome driver should be downloaded for the specific chrome browser version. If
 Official Website to download chrome driver- https://chromedriver.chromium.org/downloads 
 <br>
 
-1.	pathToChromeDriver - copy paste the path location of the chrome driver that is installed on the machine.  
+<b>1.	pathToChromeDriver -</b> copy paste the path location of the chrome driver that is installed on the machine.  
 	e.g. pathToChromeDriver=C:\\chromedriver.exe
-2.	pathToStoreAllReport - copy paste the path location of the folder where all the reports should be saved.  
+<b>2.	pathToStoreAllReport -</b> copy paste the path location of the folder where all the reports should be saved.  
 	e.g. pathToStoreAllReport =C:\\Generated Reports\\Test <br>
 	Here, Test is the folder name where all the reports will be saved. 
-3.	pathToStoreReport - copy paste the path location of the folder where any report should be saved.<br>
+<b>3.	pathToStoreReport -</b> copy paste the path location of the folder where any report should be saved.<br>
 	e.g. pathToStoreReport =C:\\Generated Reports\\Test <br>
 	Here, Test is the folder name where the specific report will be saved.
 
@@ -83,7 +83,7 @@ Use Double Slashes ( \\ ) instead of Single Slash ( \ ) while setting paths and 
 ## HOW TO USE THE API’s:
 
 ### 1. Crawler Controller API:<br>
-•<b>API Url:</b> " http://localhost:8050/AccessibilityAuditToolApi-0.0.1 SNAPSHOT/api/utility/crawling/geturls?url=http://127.0.0.1:5500/index.html " <br>
+• <b>API Url:</b> " http://localhost:8050/AccessibilityAuditToolApi-0.0.1 SNAPSHOT/api/utility/crawling/geturls?url=http://127.0.0.1:5500/index.html " <br>
 This API crawls the number of pages in the website and returns List of pages in the Website, the response is in the JSON format. It takes the base URL of the website as input parameter. 
 Here base URL is: “http://127.0.0.1:5500/index.html”.<br>
 
@@ -91,18 +91,18 @@ Enter the API URL into the web browser or your choice of API Client like postman
 
  <img src='.\API Screenshots\geturl.png'>
 After providing the input, the Crawler Controller API will return the crawled URLs from the given websites as shown below.
-  <img src='.\API Screenshots\geturl1.png'>
+  <img src='.\API Screenshots\geturl1.png'> <br>
 
 
 
 
 
 ### 2. Violation Controller API:
-•<b>API Url (getvoilation):</b> http://localhost:8050/AccessibilityAuditToolApi-0.0.1-SNAPSHOT/api/utility/getvoilation?url=http://127.0.0.1:5500/index.html
+• <b>API Url (getvoilation):</b>" http://localhost:8050/AccessibilityAuditToolApi-0.0.1-SNAPSHOT/api/utility/getvoilation?url=http://127.0.0.1:5500/index.html "<br>
 This API gets the Accessibility violations for the URL, here it is "http://127.0.0.1:5500/index.html”, and this violation’s is in json format.
 
  Enter the API URL into the web browser or your choice of API Client like postman or swagger.
-  <img src='.\API Screenshots\getviolation.png'>
+  <img src='.\API Screenshots\getviolation.png'><br>
 After providing the API URL input, the Violation Controller API will return the violations of the given web page in the JSON format as shown below.
   <img src='.\API Screenshots\getviolation1.png'>
 
@@ -112,14 +112,14 @@ After providing the API URL input, the Violation Controller API will return the 
 
 
 
-•<b>API Url (downloadreport):</b> http://localhost:8050/AccessibilityAuditToolApi-0.0.1-SNAPSHOT/api/utility/downloadreport?url=http://127.0.0.1:5500/index.html
+• <b>API Url (downloadreport):</b> " http://localhost:8050/AccessibilityAuditToolApi-0.0.1-SNAPSHOT/api/utility/downloadreport?url=http://127.0.0.1:5500/index.html "<br>
 This API gets the Accessibility violations of the given web page and generates json and Excel file and return "urlname_timestamp.zip" as a response.
 
 Enter the API URL into the web browser or your choice of API Client like postman or swagger.
-  <img src='.\API Screenshots\downloadreport.png'>
+  <img src='.\API Screenshots\downloadreport.png'> <br>
 
 After providing the API URL input, the Violation Controller API will generate json and Excel file and return "urlname_timestamp.zip" as a response as shown below.
-  <img src='.\API Screenshots\downloadreport1.png'>
+  <img src='.\API Screenshots\downloadreport1.png'> <br>
 
 
 
@@ -128,12 +128,12 @@ After providing the API URL input, the Violation Controller API will generate js
 
 
 ### 3. TestAllURLExcel Controller API:
-•<b>API Url:</b> http://localhost:8050/AccessibilityAuditToolApi-0.0.1-SNAPSHOT/api/utility/getallreports
+•<b> API Url:</b> " http://localhost:8050/AccessibilityAuditToolApi-0.0.1-SNAPSHOT/api/utility/getallreports " <br>
 This API takes JSON object as input which contains the List of URLS for which accessibility violation report should be generated. API returns the response in "timestamp.zip", the zip file contains the Excel and Json file for each URL in json input.
 
 Here we are using Postman as API client to perform post request. Here we have to provide the List of URL’s for which accessibility violation report should be generated in JSON format as API request body. After clicking on send the API will return the zip file consisting the required JSON and Excel files.
  
- <img src='.\API Screenshots\getallreports.png'>
+ <img src='.\API Screenshots\getallreports.png'> <br>
 
 
 
@@ -143,16 +143,16 @@ Here we are using Postman as API client to perform post request. Here we have to
 
 
 ### 4. HelpScrapper Controller API:
-•<b>API Url:</b> http://localhost:8050/AccessibilityAuditToolApi-0.0.1-SNAPSHOT/api/utility/gethelp?url=https://dequeuniversity.com/rules/axe/4.1/image-alt?application=axeAPI
+•<b> API Url:</b>"http://localhost:8050/AccessibilityAuditToolApi-0.0.1-SNAPSHOT/api/utility/gethelp?url=https://dequeuniversity.com/rules/axe/4.1/image-alt?application=axeAPI "<br>
 
 This API takes the Help URL as input and return this help information to solve the violation. Here Help URL is: “https://dequeuniversity.com/rules/axe/4.1/image-alt?application=axeAPI” 
 
 Enter the API URL into the web browser or your choice of API Client like postman or swagger.
-  <img src='.\API Screenshots\helpscrapper.png'>
+  <img src='.\API Screenshots\helpscrapper.png'> <br>
 
 After providing the API URL input, the HelpScrapper Controller API will return help information in JSON format as shown below.
  
- <img src='.\API Screenshots\helpscrapper1.png'>
+ <img src='.\API Screenshots\helpscrapper1.png'> <br>
 
 -----------
 **Features**
