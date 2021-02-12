@@ -100,8 +100,8 @@ After providing the input, the Crawler Controller API will return the crawled UR
 -----
 
 ### 2. Violation Controller API:
-• <b>API Url (getvoilation):</b>" <br>http://localhost:2280/api/utility/getvoilation?values=http://127.0.0.1:5500/index.html&values=cat.keyboard "<br>
-This API gets the Accessibility violations for the URL, here it is "http://127.0.0.1:5500/index.html”, and this violation’s is in json format and "cat.keyboard" is the tag value we want to filter.
+• <b>API Url (getvoilation):</b><br>" http://localhost:2280/api/utility/getvoilation?values=http://127.0.0.1:5500/index.html&values=cat.keyboard "<br>
+This API gets the Accessibility violations for the URL, here it is "http://127.0.0.1:5500/index.html”, and this violation’s are in json format and "cat.keyboard" is the WCAG A11Y standards value we want to filter.
 
  Enter the API URL into the web browser or your choice of API Client like postman or swagger.
   <img src='.\API Screenshots\getviolation.png'><br>
@@ -143,7 +143,7 @@ Here we are using Postman as API client to perform post request. Here we have to
 ----
 
 ### 4. HelpScrapper Controller API:
-•<b> API Url:</b><br><"http://localhost:2280/api/utility/gethelp?url=https://dequeuniversity.com/rules/axe/4.1/image-alt?application=axeAPI "<br>
+•<b> API Url:</b><br>"http://localhost:2280/api/utility/gethelp?url=https://dequeuniversity.com/rules/axe/4.1/image-alt?application=axeAPI "<br>
 
 This API takes the Help URL as input and return this help information to solve the violation. Here Help URL is: “https://dequeuniversity.com/rules/axe/4.1/image-alt?application=axeAPI” 
 
