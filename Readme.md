@@ -20,7 +20,6 @@
 - Version History
 - Contact
  -----------------------------------
- <br>
  
 **General info**
 <br>
@@ -38,7 +37,6 @@ These are the API’s developed in Java, using technologies like Spring Boot, Se
    - Spring Tool Suite 4.x
    - Awagger API documentation
 -----------------------
-<br>
 
 ## User Guidelines - Setup for running using STS 
 
@@ -71,7 +69,7 @@ After importing the project in STS, setup the project as follows-<br>
 Use Double Slashes ( \\ ) instead of Single Slash ( \ ) while setting paths and make sure the paths exist on the file system. These paths will be considered as default path while saving the reports, this can be changed at runtime as well.  <br>
 
 ---------------
-<br>
+
 ## User Guidelines - Setup for running using WAR file:
 
 1.	Make sure you have a tomcat server in your machine. If not [click here](https://tomcat.apache.org/download-80.cgi) to download .
@@ -86,7 +84,7 @@ Use Double Slashes ( \\ ) instead of Single Slash ( \ ) while setting paths and 
 	<img src='.\API Screenshots\tomcat3.png'> <br>
 
 ------------
-<br>
+
 ## HOW TO USE THE API’s:
 
 ### 1. Crawler Controller API:<br>
@@ -100,8 +98,6 @@ After providing the input, the Crawler Controller API will return the crawled UR
   <img src='.\API Screenshots\geturl1.png'> <br>
 
 -----
-<br>
-
 
 ### 2. Violation Controller API:
 • <b>API Url (getvoilation):</b>" <br>http://localhost:2280/api/utility/getvoilation?values=http://127.0.0.1:5500/index.html&values=cat.keyboard "<br>
@@ -131,7 +127,6 @@ After providing the API URL input, the Violation Controller API will generate js
 
 
 ----
-<br>
 
 ### 3. TestAllURLExcel Controller API:
 •<b> API Url:</b> " http://localhost:2280/api/utility/getallreports " <br>
@@ -146,7 +141,6 @@ Here we are using Postman as API client to perform post request. Here we have to
 
 
 ----
-<br>
 
 ### 4. HelpScrapper Controller API:
 •<b> API Url:</b><br><"http://localhost:2280/api/utility/gethelp?url=https://dequeuniversity.com/rules/axe/4.1/image-alt?application=axeAPI "<br>
@@ -161,7 +155,7 @@ After providing the API URL input, the HelpScrapper Controller API will return h
  <img src='.\API Screenshots\helpscrapper1.png'> <br>
 
 -----------
-<br>
+
 **Features**
 
 - Able to crawl the site and generate the list of crawled URLs.
@@ -170,13 +164,13 @@ After providing the API URL input, the HelpScrapper Controller API will return h
 - While crawling first crawler checks whether the sites contains sitemap or not, if site don’t have the sitemap it will use its crawler.
 
 ----------
-<br>
+
 **Version History**
 * 0.1
    * Initial Release
 
 
 ----------
-<br>
+
 **Contact**
 <!--name and contact github pro Link-->
