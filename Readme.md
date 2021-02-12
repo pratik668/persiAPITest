@@ -12,8 +12,10 @@
 - User Guidelines - Setup for running using STS 
 - User Guidelines - Setup for running using WAR file
 - How to Use APIs
-	- Code Examples
-	- Screenshots 
+	- Crawler Controller API
+	- Violation Controller API
+	- TestAllURLExcel Controller API
+	- HelpScrapper Controller API
 - Features 
 - Version History
 - Contact
@@ -38,15 +40,15 @@ These are the API’s developed in Java, using technologies like Spring Boot, Se
 
 **Importing Project:**
    - Unzip the code file.
-   - To import the code zip file in STS -:
-     File Import  General  Existing Projects into Workspace  Next  Select Root directory (browse the unzipped file)  Search for nested projects  Finish
+   - To import the code zip file in STS - <br>
+     File -->Import --> General --> Existing Projects into Workspace --> Next --> Select Root directory (browse the unzipped file) --> Search for nested projects --> Finish
 
 **Setup Config:**
 <br>
-After importing the project in STS, setup the project as follows-
-Wait till all the dependencies are loaded in the project, stable internet connection is required. 
-Open “config.properties” file:
-On left-side Package Explorer AccessibilityAuditToolApiApplication  src/main/resources  config.properties
+After importing the project in STS, setup the project as follows-<br>
+Wait till all the dependencies are loaded in the project, stable internet connection is required. <br>
+Open “config.properties” file:<br>
+On left-side Package Explorer AccessibilityAuditToolApiApplication --> src/main/resources --> config.properties <br>
 In “config.properties” : 
 A chrome driver should be downloaded for the specific chrome browser version. If you are using Chrome version 88, please download Chrome Driver 88.0.4324.
 Official Website to download chrome driver- https://chromedriver.chromium.org/downloads 
@@ -88,23 +90,22 @@ This API crawls the number of pages in the website and returns List of pages in 
 Here base URL is: “http://127.0.0.1:5500/index.html”.<br>
 
 Enter the API URL into the web browser or your choice of API Client like postman or swagger.
-
- <img src='.\API Screenshots\geturl.png'>
+ <img src='.\API Screenshots\geturl.png'> 
 After providing the input, the Crawler Controller API will return the crawled URLs from the given websites as shown below.
   <img src='.\API Screenshots\geturl1.png'> <br>
 
-
+-----
 
 
 
 ### 2. Violation Controller API:
-• <b>API Url (getvoilation):</b>" http://localhost:8050/AccessibilityAuditToolApi-0.0.1-SNAPSHOT/api/utility/getvoilation?url=http://127.0.0.1:5500/index.html "<br>
+• <b>API Url (getvoilation):</b>" <br>http://localhost:8050/AccessibilityAuditToolApi-0.0.1-SNAPSHOT/api/utility/getvoilation?url=http://127.0.0.1:5500/index.html "<br>
 This API gets the Accessibility violations for the URL, here it is "http://127.0.0.1:5500/index.html”, and this violation’s is in json format.
 
  Enter the API URL into the web browser or your choice of API Client like postman or swagger.
   <img src='.\API Screenshots\getviolation.png'><br>
 After providing the API URL input, the Violation Controller API will return the violations of the given web page in the JSON format as shown below.
-  <img src='.\API Screenshots\getviolation1.png'>
+  <img src='.\API Screenshots\getviolation1.png'> <br>
 
 
 
@@ -112,7 +113,7 @@ After providing the API URL input, the Violation Controller API will return the 
 
 
 
-• <b>API Url (downloadreport):</b> " http://localhost:8050/AccessibilityAuditToolApi-0.0.1-SNAPSHOT/api/utility/downloadreport?url=http://127.0.0.1:5500/index.html "<br>
+• <b>API Url (downloadreport):</b><br> " http://localhost:8050/AccessibilityAuditToolApi-0.0.1-SNAPSHOT/api/utility/downloadreport?url=http://127.0.0.1:5500/index.html "<br>
 This API gets the Accessibility violations of the given web page and generates json and Excel file and return "urlname_timestamp.zip" as a response.
 
 Enter the API URL into the web browser or your choice of API Client like postman or swagger.
@@ -124,7 +125,7 @@ After providing the API URL input, the Violation Controller API will generate js
 
 
 
-
+----
 
 
 ### 3. TestAllURLExcel Controller API:
@@ -139,11 +140,11 @@ Here we are using Postman as API client to perform post request. Here we have to
 
 
 
-
+----
 
 
 ### 4. HelpScrapper Controller API:
-•<b> API Url:</b>"http://localhost:8050/AccessibilityAuditToolApi-0.0.1-SNAPSHOT/api/utility/gethelp?url=https://dequeuniversity.com/rules/axe/4.1/image-alt?application=axeAPI "<br>
+•<b> API Url:</b><br><"http://localhost:8050/AccessibilityAuditToolApi-0.0.1-SNAPSHOT/api/utility/gethelp?url=https://dequeuniversity.com/rules/axe/4.1/image-alt?application=axeAPI "<br>
 
 This API takes the Help URL as input and return this help information to solve the violation. Here Help URL is: “https://dequeuniversity.com/rules/axe/4.1/image-alt?application=axeAPI” 
 
