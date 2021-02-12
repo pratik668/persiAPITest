@@ -1,6 +1,7 @@
 
 # Accessibility Audit Tool APIs (JAVA)
 
+
 ## Version 1.0.0
 
 
@@ -16,7 +17,7 @@
 - Features 
 - Version History
 - Contact
-   
+ -----------------------------------
 **General info**
 <br>
 These are the API’s developed in Java, using technologies like Spring Boot, Selenium for Automation of testing and Axe-Core APIs for performing accessibility tests on webpages. It provides a simple and intuitive application programming interface to assist the user in testing and generating reports. These report helps the user to fix the violation of any desired website. The tool aids developers in identifying accessibility problems and features for WCAG 2.0, WCAG 2.1, Section 508 and AXE best standards. 
@@ -32,7 +33,7 @@ These are the API’s developed in Java, using technologies like Spring Boot, Se
    - JAVA 1.8.x
    - Spring Tool Suite 4.x
    - Awagger API documentation
-
+-----------------------
 ## User Guidelines - Setup for running using STS 
 
 **Importing Project:**
@@ -63,9 +64,10 @@ Official Website to download chrome driver- https://chromedriver.chromium.org/do
 <b>NOTE:</b>
 Use Double Slashes ( \\ ) instead of Single Slash ( \ ) while setting paths and make sure the paths exist on the file system. These paths will be considered as default path while saving the reports, this can be changed at runtime as well. 
 
+---------------
 ## User Guidelines - Setup for running using WAR file:
 
-1.	Make sure you have a tomcat server in your machine. If not click here to download.
+1.	Make sure you have a tomcat server in your machine. If not [click here ] (https://tomcat.apache.org/download-80.cgi) to download .
 2.	After downloading the tomcat server extract it any directory of your choice, then copy the WAR file of the API into the webapps folder.
  	<img src='.\API Screenshots\tomcat1.png'>
 
@@ -76,12 +78,12 @@ Use Double Slashes ( \\ ) instead of Single Slash ( \ ) while setting paths and 
 5.	After entering the command, the tomcat server will be up and running on your local machine. Now you are good to perform the API’s operations.
 	<img src='.\API Screenshots\tomcat3.png'>
 
-
+------------
 
 ## HOW TO USE THE API’s:
 
-<b>1. Crawler Controller API:</b><br>
-•API Url: http://localhost:8050/AccessibilityAuditToolApi-0.0.1 SNAPSHOT/api/utility/crawling/geturls?url=http://127.0.0.1:5500/index.html <br>
+### 1. Crawler Controller API:<br>
+•<b>API Url:<b> http://localhost:8050/AccessibilityAuditToolApi-0.0.1 SNAPSHOT/api/utility/crawling/geturls?url=http://127.0.0.1:5500/index.html <br>
 This API crawls the number of pages in the website and returns List of pages in the Website, the response is in the JSON format. It takes the base URL of the website as input parameter. 
 Here base URL is: “http://127.0.0.1:5500/index.html”.<br>
 
@@ -94,9 +96,8 @@ After providing the input, the Crawler Controller API will return the crawled UR
 
 
 
-2. Violation Controller API:
-•	API Url (getvoilation):
-http://localhost:8050/AccessibilityAuditToolApi-0.0.1-SNAPSHOT/api/utility/getvoilation?url=http://127.0.0.1:5500/index.html
+### 2. Violation Controller API:
+•<b>API Url (getvoilation):<b> http://localhost:8050/AccessibilityAuditToolApi-0.0.1-SNAPSHOT/api/utility/getvoilation?url=http://127.0.0.1:5500/index.html
 This API gets the Accessibility violations for the URL, here it is "http://127.0.0.1:5500/index.html”, and this violation’s is in json format.
 
  Enter the API URL into the web browser or your choice of API Client like postman or swagger.
@@ -110,8 +111,7 @@ After providing the API URL input, the Violation Controller API will return the 
 
 
 
-•	API Url (downloadreport):
-http://localhost:8050/AccessibilityAuditToolApi-0.0.1-SNAPSHOT/api/utility/downloadreport?url=http://127.0.0.1:5500/index.html
+•<b>API Url (downloadreport):<b> http://localhost:8050/AccessibilityAuditToolApi-0.0.1-SNAPSHOT/api/utility/downloadreport?url=http://127.0.0.1:5500/index.html
 This API gets the Accessibility violations of the given web page and generates json and Excel file and return "urlname_timestamp.zip" as a response.
 
 Enter the API URL into the web browser or your choice of API Client like postman or swagger.
@@ -126,9 +126,8 @@ After providing the API URL input, the Violation Controller API will generate js
 
 
 
-3. TestAllURLExcel Controller API:
-•	API Url:
-http://localhost:8050/AccessibilityAuditToolApi-0.0.1-SNAPSHOT/api/utility/getallreports
+### 3. TestAllURLExcel Controller API:
+•<b>API Url:<b> http://localhost:8050/AccessibilityAuditToolApi-0.0.1-SNAPSHOT/api/utility/getallreports
 This API takes JSON object as input which contains the List of URLS for which accessibility violation report should be generated. API returns the response in "timestamp.zip", the zip file contains the Excel and Json file for each URL in json input.
 
 Here we are using Postman as API client to perform post request. Here we have to provide the List of URL’s for which accessibility violation report should be generated in JSON format as API request body. After clicking on send the API will return the zip file consisting the required JSON and Excel files.
@@ -142,9 +141,8 @@ Here we are using Postman as API client to perform post request. Here we have to
 
 
 
-4. HelpScrapper Controller API:
-•	API Url:
-http://localhost:8050/AccessibilityAuditToolApi-0.0.1-SNAPSHOT/api/utility/gethelp?url=https://dequeuniversity.com/rules/axe/4.1/image-alt?application=axeAPI
+### 4. HelpScrapper Controller API:
+•<b>API Url:<b> http://localhost:8050/AccessibilityAuditToolApi-0.0.1-SNAPSHOT/api/utility/gethelp?url=https://dequeuniversity.com/rules/axe/4.1/image-alt?application=axeAPI
 
 This API takes the Help URL as input and return this help information to solve the violation. Here Help URL is: “https://dequeuniversity.com/rules/axe/4.1/image-alt?application=axeAPI” 
 
@@ -155,6 +153,7 @@ After providing the API URL input, the HelpScrapper Controller API will return h
  
  <img src='.\API Screenshots\helpscrapper1.png'>
 
+-----------
 **Features**
 
 Able to crawl the site and generate the list of crawled URLs.
@@ -162,12 +161,12 @@ Generate the audit report in xlsx and json format.
 Able to filter the json and xlsx reports by passing Tag names.
 While crawling first crawler checks whether the sites contains sitemap or not, if site don’t have the sitemap it will use its crawler.
 
-
+----------
 **Version History**
 * 0.1
    * Initial Release
 
 
-
+----------
 **Contact**
 <!--name and contact github pro Link-->
