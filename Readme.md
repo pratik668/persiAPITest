@@ -7,10 +7,9 @@
 **Table of contents**
 - General Info
 - Prerequisites
-- Dependencies
-- Supported Browser
 - Technologies
-- User Guidelines
+- User Guidelines - Setup for running using STS 
+- User Guidelines - Setup for running using WAR file
 - How to Use APIs
 	- Code Examples
 	- Screenshots 
@@ -29,25 +28,19 @@ These are the API’s developed in Java, using technologies like Spring Boot, Se
    - Stable internet connection
 
 
-**Dependencies**
-   - Windows System
-
-**Supported Browser**
-   - Chrome
-
 **Technologies**
    - JAVA 1.8.x
    - Spring Tool Suite 4.x
    - Awagger API documentation
 
-##User Guidelines - to run using STS 
+## User Guidelines - Setup for running using STS 
 
-**IMPORTING PROJECT:**
+**Importing Project:**
    - Unzip the code file.
    - To import the code zip file in STS -:
      File Import  General  Existing Projects into Workspace  Next  Select Root directory (browse the unzipped file)  Search for nested projects  Finish
 
-**SETUP CONFIG:**
+**Setup Config:**
 <br>
 After importing the project in STS, setup the project as follows-
 Wait till all the dependencies are loaded in the project, stable internet connection is required. 
@@ -58,39 +51,39 @@ A chrome driver should be downloaded for the specific chrome browser version. If
 Official Website to download chrome driver- https://chromedriver.chromium.org/downloads 
 <br>
 
-1.	pathToChromeDriver - copy paste the path location of the chrome driver that is installed on the machine.     
-e.g. pathToChromeDriver=C:\\chromedriver.exe
-2.	pathToStoreAllReport - copy paste the path location of the folder where all the reports should be saved.         
-e.g. pathToStoreAllReport =C:\\Generated Reports\\Test
-Here, Test is the folder name where all the reports will be saved. 
-3.	pathToStoreReport - copy paste the path location of the folder where any report should be saved.
-e.g. pathToStoreReport =C:\\Generated Reports\\Test
-Here, Test is the folder name where the specific report will be saved.
+1.	pathToChromeDriver - copy paste the path location of the chrome driver that is installed on the machine.  
+	e.g. pathToChromeDriver=C:\\chromedriver.exe
+2.	pathToStoreAllReport - copy paste the path location of the folder where all the reports should be saved.  
+	e.g. pathToStoreAllReport =C:\\Generated Reports\\Test <br>
+	Here, Test is the folder name where all the reports will be saved. 
+3.	pathToStoreReport - copy paste the path location of the folder where any report should be saved.<br>
+	e.g. pathToStoreReport =C:\\Generated Reports\\Test <br>
+	Here, Test is the folder name where the specific report will be saved.
 
 <b>NOTE:</b>
-Use Double Slashes ( \\ ) instead of Single Slash ( \ ) while setting paths and make sure the paths exist on the file system.
-These paths will be considered as default path while saving the reports, this can be changed at runtime as well. 
+Use Double Slashes ( \\ ) instead of Single Slash ( \ ) while setting paths and make sure the paths exist on the file system. These paths will be considered as default path while saving the reports, this can be changed at runtime as well. 
 
-##User Guidelines - to run using WAR file:
+## User Guidelines - Setup for running using WAR file:
 
 1.	Make sure you have a tomcat server in your machine. If not click here to download.
 2.	After downloading the tomcat server extract it any directory of your choice, then copy the WAR file of the API into the webapps folder.
- <img src='.\API Screenshots\tomcat1.png'>
+ 	<img src='.\API Screenshots\tomcat1.png'>
 
 3.	Then go to the bin folder and open terminal in that folder.
 4.	After terminal is opened input the following command: “startup”.
-<img src='.\API Screenshots\tomcat2.png'>
+	<img src='.\API Screenshots\tomcat2.png'>
 
 5.	After entering the command, the tomcat server will be up and running on your local machine. Now you are good to perform the API’s operations.
-<img src='.\API Screenshots\tomcat3.png'>
+	<img src='.\API Screenshots\tomcat3.png'>
 
 
-**HOW TO USE THE API’s:**
 
-1. Crawler Controller API:
-•	API Url:   
-http://localhost:8050/AccessibilityAuditToolApi-0.0.1 SNAPSHOT/api/utility/crawling/geturls?url=http://127.0.0.1:5500/index.html
-This API crawls the number of pages in the website and returns List of pages in the Website, the response is in the JSON format. It takes the base URL of the website as input parameter. Here base URL is: “http://127.0.0.1:5500/index.html”.
+## HOW TO USE THE API’s:
+
+<b>1. Crawler Controller API:</b><br>
+•API Url: http://localhost:8050/AccessibilityAuditToolApi-0.0.1 SNAPSHOT/api/utility/crawling/geturls?url=http://127.0.0.1:5500/index.html <br>
+This API crawls the number of pages in the website and returns List of pages in the Website, the response is in the JSON format. It takes the base URL of the website as input parameter. 
+Here base URL is: “http://127.0.0.1:5500/index.html”.<br>
 
 Enter the API URL into the web browser or your choice of API Client like postman or swagger.
  <img src='.\API Screenshots\geturl.png'>
@@ -162,4 +155,19 @@ After providing the API URL input, the HelpScrapper Controller API will return h
  
  <img src='.\API Screenshots\helpscrapper1.png'>
 
+**Features**
 
+Able to crawl the site and generate the list of crawled URLs.
+Generate the audit report in xlsx and json format.
+Able to filter the json and xlsx reports by passing Tag names.
+While crawling first crawler checks whether the sites contains sitemap or not, if site don’t have the sitemap it will use its crawler.
+
+
+**Version History**
+* 0.1
+   * Initial Release
+
+
+
+**Contact**
+<!--name and contact github pro Link-->
