@@ -89,7 +89,7 @@ Here base URL is: “http://127.0.0.1:5500/index.html”.<br>
 
 Enter the API URL into the web browser or your choice of API Client like postman or swagger.
 
- <img src='.\API Screenshots\geturl.png' width="300" height="300">
+ <img src='.\API Screenshots\geturl.png'>
 After providing the input, the Crawler Controller API will return the crawled URLs from the given websites as shown below.
   <img src='.\API Screenshots\geturl1.png'>
 
