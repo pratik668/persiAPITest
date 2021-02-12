@@ -114,7 +114,7 @@ After providing the API URL input, the Violation Controller API will return the 
 <br>
 
 
-• <b>API Url (downloadreport):</b><br> " http://localhost:2280/api/utility/downloadreport?values=http://127.0.0.1:5500/index.html@values=wcag2a "<br>
+• <b>API Url (downloadreport):</b><br> " http://localhost:2280/api/utility/downloadreport?values=http://127.0.0.1:5500/index.html&values=wcag2a "<br>
 This API gets the Accessibility violations of the given web page and generates json and Excel file and return "urlname_timestamp.zip" as a response.
 
 Enter the API URL into the web browser or your choice of API Client like postman or swagger.
