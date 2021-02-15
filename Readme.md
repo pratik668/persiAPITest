@@ -121,13 +121,12 @@ These are the API’s developed in Java, using technologies like Spring Boot, Se
 **Setup Chromedriver:**
 <br>
 After importing the project in STS, setup the project as follows-<br>
-- Update the imported project -
+- Update the imported project -<br>
 	Right click on Project folder --> Maven --> Update Project.
 - Wait till all the dependencies are loaded in the project, stable internet connection is required. <br>
 - <b>chrome driver setup:</b> 
-	1. A chrome driver should be downloaded for the specific chrome browser version. If you are using Chrome version 88, please download Chrome Driver 88.0.4324.
-	2. Official Website to download [chrome driver](https://chromedriver.chromium.org/downloads) <br>
-	3. copy the downloaded chromedriver in the chromedriver folder according to project structure.
+	- A chrome driver should be downloaded for the specific chrome browser version. If you are using Chrome version 88, please download Chrome Driver 88.0.4324. Official 	            Website to download [chrome driver](https://chromedriver.chromium.org/downloads) <br>
+	- copy the downloaded chromedriver in the chromedriver folder according to project structure.
 
 
 
