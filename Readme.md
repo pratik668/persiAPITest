@@ -9,6 +9,7 @@
 - General Info
 - Prerequisites
 - Technologies
+- Project Structure
 - User Guidelines - Setup for running using STS 
 - User Guidelines - Setup for running using WAR file
 - How to Use APIs
@@ -46,7 +47,7 @@ These are the API’s developed in Java, using technologies like Spring Boot, Se
 
 			|   pom.xml
 			|   
-			|       
+			|      
 			+---chromedriver
 			|       chromedriver.exe
 			|       
@@ -134,10 +135,10 @@ After importing the project in STS, setup the project as follows-<br>
 
 ## User Guidelines - Setup for running using WAR file:
 
-**Creating WAR file:**
+<b>Creating WAR file:</b>
 <br>
-- 
-- 
+To create WAR file follow the below instrucions-
+- Right click on Project folder --> Show in Local Terminal --> Terminal --> after terminal is opened in control panale --> enter the command " mnv install " --> War file will 	   build in target folder of project
 
 
 
@@ -170,7 +171,7 @@ After providing the input, the Crawler Controller API will return the crawled UR
 
 ### 2. Violation Controller API:
 • <b>API Url (getvoilation):</b><br>" http://localhost:2280/api/utility/getvoilation?values=http://127.0.0.1:5500/index.html&values=cat.keyboard "<br>
-This API gets the Accessibility violations for the URL, here it is "http://127.0.0.1:5500/index.html”, and this violation’s are in json format and "cat.keyboard" is the WCAG A11Y standards value we want to filte and if we did not pass any tag filter then it will simply gets the all Accessibility violations for that perticular URL.
+This API gets the Accessibility violations for the URL, here it is "http://127.0.0.1:5500/index.html”, and this violation’s are in json format and "cat.keyboard" is the WCAG A11Y standards value we want to filter and if we did not pass any tag filter then it will simply gets the all Accessibility violations for that perticular URL.
 
  Enter the API URL into the web browser or your choice of API Client like postman or swagger.
   <img src='.\API Screenshots\getviolation.png'><br>
