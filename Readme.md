@@ -138,9 +138,9 @@ After importing the project in STS, setup the project as follows-<br>
 <b>Creating WAR file:</b>
 <br>
 To create WAR file follow the below instrucions-
-- Right click on Project folder --> Show in Local Terminal --> Terminal --> after terminal is opened in control panale --> enter the command " mnv install " --> War file will 	   build in target folder of project
+	- Right click on Project folder --> Show in Local Terminal --> Terminal --> after terminal is opened in control panale --> enter the command " mnv install " --> War file 		will build in target folder of project
 
-
+<b>Setting up the WAR file:</b><br>
 
 1.	Make sure you have a tomcat server in your machine. If not [click here](https://tomcat.apache.org/download-80.cgi) to download .
 2.	After downloading the tomcat server extract it any directory of your choice, then copy the WAR file of the API into the webapps folder.
