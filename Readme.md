@@ -138,7 +138,7 @@ After importing the project in STS, setup the project as follows-<br>
 <b>Creating WAR file:</b>
 <br>
 To create WAR file follow the below instrucions-
-	- Right click on Project folder --> Show in Local Terminal --> Terminal --> after terminal is opened in control panale --> enter the command " mnv install " --> War file 		will build in target folder of project
+- Right click on Project folder --> Show in Local Terminal --> Terminal --> after terminal is opened in control panale --> enter the command " mnv install " --> War file 		will build in target folder of project
 
 <b>Setting up the WAR file:</b><br>
 
