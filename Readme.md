@@ -36,7 +36,80 @@ These are the API’s developed in Java, using technologies like Spring Boot, Se
    - JAVA 1.8.x
    - Spring Tool Suite 4.x
    - Awagger API documentation
+   
 -----------------------
+
+### Project Structure -
+
+
+			Accessibility Audit Tool APIs :.
+
+			|   pom.xml
+			|   
+			|       
+			+---chromedriver
+			|       chromedriver.exe
+			|       
+			+---src    
+			|   +---main
+			|   |   +---java
+			|   |   |   \---com
+			|   |   |       \---persistent
+			|   |   |           \---main
+			|   |   |               |   AccessibilityAuditToolApiApplication.java
+			|   |   |               |   ServletInitializer.java
+			|   |   |               |   
+			|   |   |               +---config
+			|   |   |               |       ConfigProperties.java
+			|   |   |               |       
+			|   |   |               +---controller
+			|   |   |               |       CrawlerController.java
+			|   |   |               |       HelpScrapperController.java
+			|   |   |               |       TestAllUrlExcelController.java
+			|   |   |               |       ViolationController.java
+			|   |   |               |       
+			|   |   |               +---exceptions
+			|   |   |               |       CustomRestExceptionHandler.java
+			|   |   |               |       DriverNotFoundException.java
+			|   |   |               |       DriverNotFoundExceptionController.java
+			|   |   |               |       GenericExceptionController.java
+			|   |   |               |       NoDataException.java
+			|   |   |               |       NoDataExceptionController.java
+			|   |   |               |       ParameterMissingException.java
+			|   |   |               |       ParameterMissingExceptionController.java
+			|   |   |               |       
+			|   |   |               +---model
+			|   |   |               |       Crawler.java
+			|   |   |               |       DriverInstance.java
+			|   |   |               |       ErrorDetails.java
+			|   |   |               |       ReadAllLinks.java
+			|   |   |               |       ReportGenerator.java
+			|   |   |               |       Voilation.java
+			|   |   |               |       
+			|   |   |               +---service
+			|   |   |               |       CrawlerService.java
+			|   |   |               |       HelpScrapperService.java
+			|   |   |               |       JsonExtractorService.java
+			|   |   |               |       JsoupCrawlerService.java
+			|   |   |               |       ReportGeneratorService.java
+			|   |   |               |       TagParserService.java
+			|   |   |               |       TestAllUrlService.java
+			|   |   |               |       TestOneUrlService.java
+			|   |   |               |       
+			|   |   |               \---wrapper
+			|   |   |                       AllReportWrappers.java
+			|   |   |                       UrlWrapper.java
+			|   |   |                       VoilationWrapper.java
+			|   |   |                       
+			|   |   +---resources
+			|   |   |   |   application.properties
+			|   |   |   |   axe.min.js
+			|   |   |   |   config.properties
+			|   |   |   |   
+
+
+
+-------
 
 ## User Guidelines - Setup for running using STS 
 
@@ -45,32 +118,29 @@ These are the API’s developed in Java, using technologies like Spring Boot, Se
    - To import the code zip file in STS - <br>
      File -->Import --> General --> Existing Projects into Workspace --> Next --> Select Root directory (browse the unzipped file) --> Search for nested projects --> Finish.
 
-**Setup Config:**
+**Setup Chromedriver:**
 <br>
 After importing the project in STS, setup the project as follows-<br>
+- Update the imported project -
+	Right click on Project folder --> Maven --> Update Project.
 - Wait till all the dependencies are loaded in the project, stable internet connection is required. <br>
-- Open “config.properties” file:<br>
-- On left-side Package Explorer AccessibilityAuditToolApiApplication --> src/main/resources --> config.properties <br>
-- In “config.properties” : 
-  A chrome driver should be downloaded for the specific chrome browser version. If you are using Chrome version 88, please download Chrome Driver 88.0.4324.
-  Official Website to download [chrome driver](https://chromedriver.chromium.org/downloads) <br>
+- <b>chrome driver setup:</b> 
+	1. A chrome driver should be downloaded for the specific chrome browser version. If you are using Chrome version 88, please download Chrome Driver 88.0.4324.
+	2. Official Website to download [chrome driver](https://chromedriver.chromium.org/downloads) <br>
+	3. copy the downloaded chromedriver in the chromedriver folder according to project structure.
 
 
-  <b>1.	pathToChromeDriver -</b> copy paste the path location of the chrome driver that is installed on the machine.  
-	e.g. pathToChromeDriver=C:\\chromedriver.exe <br>
-  <b>2.	pathToStoreAllReport -</b> copy paste the path location of the folder where all the reports should be saved.  
-	e.g. pathToStoreAllReport =C:\\Generated Reports\\Test <br>
-	Here, Test is the folder name where all the reports will be saved. <br>
-  <b>3.	pathToStoreReport -</b> copy paste the path location of the folder where any report should be saved.<br>
-	e.g. pathToStoreReport =C:\\Generated Reports\\Test <br>
-	Here, Test is the folder name where the specific report will be saved. <br>
-
-<b>NOTE:</b>
-Use Double Slashes ( \\ ) instead of Single Slash ( \ ) while setting paths and make sure the paths exist on the file system. These paths will be considered as default path while saving the reports, this can be changed at runtime as well.  <br>
 
 ---------------
 
 ## User Guidelines - Setup for running using WAR file:
+
+**Creating WAR file:**
+<br>
+- 
+- 
+
+
 
 1.	Make sure you have a tomcat server in your machine. If not [click here](https://tomcat.apache.org/download-80.cgi) to download .
 2.	After downloading the tomcat server extract it any directory of your choice, then copy the WAR file of the API into the webapps folder.
@@ -101,7 +171,7 @@ After providing the input, the Crawler Controller API will return the crawled UR
 
 ### 2. Violation Controller API:
 • <b>API Url (getvoilation):</b><br>" http://localhost:2280/api/utility/getvoilation?values=http://127.0.0.1:5500/index.html&values=cat.keyboard "<br>
-This API gets the Accessibility violations for the URL, here it is "http://127.0.0.1:5500/index.html”, and this violation’s are in json format and "cat.keyboard" is the WCAG A11Y standards value we want to filter.
+This API gets the Accessibility violations for the URL, here it is "http://127.0.0.1:5500/index.html”, and this violation’s are in json format and "cat.keyboard" is the WCAG A11Y standards value we want to filte and if we did not pass any tag filter then it will simply gets the all Accessibility violations for that perticular URL.
 
  Enter the API URL into the web browser or your choice of API Client like postman or swagger.
   <img src='.\API Screenshots\getviolation.png'><br>
