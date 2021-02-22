@@ -115,10 +115,9 @@ These are the API’s developed in Java, using technologies like Spring Boot, Se
 ## User Guidelines - Setup for running using STS 
 
 **Importing Project:**
-   - Unzip the code file.
-   - To import the code zip file in STS - <br>
-     File -->Import --> General --> Existing Projects into Workspace --> Next --> Select Root directory (browse the unzipped file) --> Search for nested projects --> Finish.
-
+   - Download zip file of the project from github.
+   - To import the code zip file project in STS - <br>
+	File --> Open Projects from the File Systems --> Archive --> Browse and select the Downloaded project zip file --> Open --> select project --> Finish.
 **Setup Chromedriver:**
 <br>
 After importing the project in STS, setup the project as follows-<br>
@@ -127,7 +126,7 @@ After importing the project in STS, setup the project as follows-<br>
 - Wait till all the dependencies are loaded in the project, stable internet connection is required. <br>
 - <b>chrome driver setup:</b> 
 	- A chrome driver should be downloaded for the specific chrome browser version. If you are using Chrome version 88, please download Chrome Driver 88.0.4324. Official 	            Website to download [chrome driver](https://chromedriver.chromium.org/downloads) <br>
-	- copy the downloaded chromedriver in the chromedriver folder according to project structure.
+	- copy the downloaded chromedriver in the chromedriver folder according to project structure. (also look at read.txt in chromedriver folder for more info.)
 
 
 
